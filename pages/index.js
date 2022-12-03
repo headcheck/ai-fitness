@@ -1,7 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
+import twitterLogo from '../assets/twitter-logo.svg';
+import donorLogo from '../assets/donor.png';
 import { useState } from 'react';
+
+// Constants
+const TWITTER_HANDLE = "headcheck";
+const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const Home = () => {
     const [userInput, setUserInput] = useState('');
@@ -36,6 +42,9 @@ const Home = () => {
       <Head>
         <title>Who's Your Donor</title>
       </Head>
+        <div>
+            <img src={donorLogo}/>
+        </div>
       <div className="container">
         <div className="header">
           <div className="header-title">
@@ -70,6 +79,8 @@ const Home = () => {
                   </div>
       )}
       </div>
+
+
       <div className="badge-container grow">
         <a
           href="https://buildspace.so/builds/ai-writer"
@@ -82,6 +93,28 @@ const Home = () => {
           </div>
         </a>
       </div>
+
+    <div className="footer-container">
+        <a
+            href={TWITTER_LINK}
+            target="_blank"
+            rel="noreferrer"
+        >
+            <div className="badge">
+                <Image src={twitterLogo} alt="twitter logo" />
+                <p>{`@${TWITTER_HANDLE}`}</p>
+            </div>
+        </a>
+    </div>
+
+        <div className="footer-container-right">
+            <a
+                href="https://github.com/headcheck/gpt3-writer-extension"
+                target="_blank"
+                rel="noreferrer">Download Chrome Extension</a>
+        </div>
+
+
     </div>
   );
 };
