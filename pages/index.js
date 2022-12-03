@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
 import twitterLogo from '../assets/twitter-logo.svg';
-import donorLogo from '../assets/donor.png';
 import { useState } from 'react';
 
 // Constants
@@ -42,9 +41,6 @@ const Home = () => {
       <Head>
         <title>Who's Your Donor</title>
       </Head>
-        <div>
-            <img src={donorLogo}/>
-        </div>
       <div className="container">
         <div className="header">
           <div className="header-title">
