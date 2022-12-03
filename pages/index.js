@@ -51,14 +51,14 @@ const Home = () => {
           </div>
         </div>
         <div className="prompt-container">
-            <textarea placeholder="start typing here" className="prompt-box" value={userInput}
+            <textarea placeholder="enter name of campaign candidate here" className="prompt-box" value={userInput}
                 onChange={onUserChangedText}/>
         </div>
         <div className="prompt-buttons">
             <a className={isGenerating ? 'generate-button loading' : 'generate-button'}
                 onClick={callGenerateEndpoint}>
               <div className="generate">
-                  {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
+                  {isGenerating ? <span className="loader"></span> : <p>Fetch Donors</p>}
               </div>
           </a>
         </div>
